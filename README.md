@@ -27,4 +27,5 @@ sudo certbot --nginx
 ```
 
 Visit: https://www.inmotionhosting.com/support/website/ssl/lets-encrypt-ssl-ubuntu-with-certbot/
+
 Visit: https://dev.to/xarala221/the-easiest-way-to-deploy-a-react-web-application-2l8a
