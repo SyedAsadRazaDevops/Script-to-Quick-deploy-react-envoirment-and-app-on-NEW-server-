@@ -29,3 +29,28 @@ sudo certbot --nginx
 Visit: https://www.inmotionhosting.com/support/website/ssl/lets-encrypt-ssl-ubuntu-with-certbot/
 
 Visit: https://dev.to/xarala221/the-easiest-way-to-deploy-a-react-web-application-2l8a
+
+# NGINX Site-Avalible
+Once on the server, look for your web server configuration in /etc/nginx/sites-enabled. There is also a directory called sites-allowed; this directory includes configurations that are not necessarily activated. Once you find the configuration file, display the output in your terminal with the following command:
+```
+cat /etc/nginx/sites-enabled/your_domain
+```
+If your site has no HTTPS certificate, you will receive a result similar to this:
+
+Output
+```
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/your_domain/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name your_domain www.your_domain;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+
+```
