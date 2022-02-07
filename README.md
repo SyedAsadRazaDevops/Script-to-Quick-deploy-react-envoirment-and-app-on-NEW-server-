@@ -53,3 +53,7 @@ server {
 }
 
 ```
+Next, you need to create a symbolic link within the sites-enabled directory that points out to this configuration file:
+```
+sudo ln -s /etc/nginx/sites-available/<my-nginx-file-name> /etc/nginx/sites-enabled
+```
