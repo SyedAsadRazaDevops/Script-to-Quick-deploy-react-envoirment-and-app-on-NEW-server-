@@ -40,17 +40,16 @@ If your site has no HTTPS certificate, you will receive a result similar to this
 Output
 ```
 server {
+	  
         listen 80;
-        listen [::]:80;
-
-        root /var/www/your_domain/html;
+        root <my-project-path>/build;
         index index.html index.htm index.nginx-debian.html;
-
-        server_name your_domain www.your_domain;
-
-        location / {
-                try_files $uri $uri/ =404;
+        server_name <my-domain> www.<my-domain>;
+       
+ location / {
+            try_files $uri  /index.html;
         }
+
 }
 
 ```
