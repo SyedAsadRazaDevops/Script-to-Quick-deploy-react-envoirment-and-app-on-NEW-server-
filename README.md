@@ -33,7 +33,7 @@ Visit: https://dev.to/xarala221/the-easiest-way-to-deploy-a-react-web-applicatio
 # NGINX Site-Avalible
 Once on the server, look for your web server configuration in /etc/nginx/sites-enabled. There is also a directory called sites-allowed; this directory includes configurations that are not necessarily activated. Once you find the configuration file, display the output in your terminal with the following command:
 ```
-cat /etc/nginx/sites-enabled/your_domain
+cat /etc/nginx/sites-available/your_domain
 ```
 If your site has no HTTPS certificate, you will receive a result similar to this:
 
