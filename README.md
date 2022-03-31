@@ -42,6 +42,7 @@ Output
 server {
 	  
         listen 80;
+	listen [::]:80;
         root <my-project-path>/build;
         index index.html index.htm index.nginx-debian.html;
         server_name <my-domain> www.<my-domain>;
