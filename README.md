@@ -40,12 +40,8 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 #----------GENRATE SSL FOR DOMAINS---------------------------#
 sudo certbot --nginx
 ```
+for nginx: https://github.com/SyedAsadRazaDevops/who-to-install-and-upgrade-nginx-1.20-on-Ubuntu-20.04
 
-Visit: https://www.inmotionhosting.com/support/website/ssl/lets-encrypt-ssl-ubuntu-with-certbot/
-
-Visit: https://askubuntu.com/questions/1389719/install-nginx-1-20-2-on-ubuntu-20-04
-
-Visit: https://dev.to/xarala221/the-easiest-way-to-deploy-a-react-web-application-2l8a
 
 # NGINX Site-Avalible
 Once on the server, look for your web server configuration in /etc/nginx/sites-enabled. There is also a directory called sites-allowed; this directory includes configurations that are not necessarily activated. Once you find the configuration file, display the output in your terminal with the following command:
@@ -75,3 +71,9 @@ Next, you need to create a symbolic link within the sites-enabled directory that
 ```
 sudo ln -s /etc/nginx/sites-available/<my-nginx-file-name> /etc/nginx/sites-enabled
 ```
+
+Visit: https://www.inmotionhosting.com/support/website/ssl/lets-encrypt-ssl-ubuntu-with-certbot/
+
+Visit: https://askubuntu.com/questions/1389719/install-nginx-1-20-2-on-ubuntu-20-04
+
+Visit: https://dev.to/xarala221/the-easiest-way-to-deploy-a-react-web-application-2l8a
