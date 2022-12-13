@@ -1,32 +1,49 @@
 # Script-to-Quick-deploy-react-envoirment-and-app-on-NEW-server-
 ```
-#install nodejs and npm
+#----------INSTALL NODEJS & NPM-------------------------------#
+###install nodejs and npm###
 sudo apt-get install curl
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install nodejs
 apt install nodejs
-#check version of nodejs and npm
+
+#----------CHECK NODE & NPM VERSION---------------------------#
 nodejs -V
 npm --v
-#update and install nginx 
+
+#----------INSTALL LATEST NGINX VERSION-----------------------#
+
+sudo apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring
+curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
+     | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
+echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \
+     http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" \
+     | sudo tee /etc/apt/sources.list.d/nginx.list
+echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" \
+     | sudo tee /etc/apt/preferences.d/99-nginx
 sudo apt update
-sudo apt upgrade -y
 sudo apt install nginx -y
-#git-hub directory path
+
+#----------CLONE GITHUB REPO---------------------------------#
 cd /public	
-#install npm
+
+#----------RUN NPM AND AUDIT FIX-----------------------------#
 npm install
 npm audit fix
-#Install Certbot in Ubuntu with snapd
+
+#----------INSTALL CERTBOT FOR SSL---------------------------#
 sudo apt install snapd
 sudo snap install core; sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
-#Create an SSL Certificate with Certbot
+
+#----------GENRATE SSL FOR DOMAINS---------------------------#
 sudo certbot --nginx
 ```
 
 Visit: https://www.inmotionhosting.com/support/website/ssl/lets-encrypt-ssl-ubuntu-with-certbot/
+
+Visit: https://askubuntu.com/questions/1389719/install-nginx-1-20-2-on-ubuntu-20-04
 
 Visit: https://dev.to/xarala221/the-easiest-way-to-deploy-a-react-web-application-2l8a
 
