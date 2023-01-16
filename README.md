@@ -10,16 +10,13 @@ apt install nodejs
 OR
 
 **NVM is a Node Version Manager tool**. Using the NVM utility, you can install multiple node.js versions on a single system.
-```
+
 sudo apt install curl 
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
-```
-```
+
 source ~/.bashrc   
-```
-```
+
 nvm install node 
-```
 
 ### WORKING WITH NVM
 
