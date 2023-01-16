@@ -7,6 +7,27 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install nodejs
 apt install nodejs
 
+OR
+
+**NVM is a Node Version Manager tool**. Using the NVM utility, you can install multiple node.js versions on a single system.
+```
+sudo apt install curl 
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+```
+```
+source ~/.bashrc   
+```
+```
+nvm install node 
+```
+
+### WORKING WITH NVM
+
+nvm ls 
+nvm ls-remote
+nvm use 12.18
+nvm run default --version
+
 #----------CHECK NODE & NPM VERSION---------------------------#
 nodejs -V
 npm --v
