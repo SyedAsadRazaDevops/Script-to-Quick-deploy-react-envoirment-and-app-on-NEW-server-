@@ -26,7 +26,7 @@ nvm use 12.18
 nvm run default --version
 
 #----------CHECK NODE & NPM VERSION---------------------------#
-nodejs -V
+node -V
 npm --v
 
 #----------INSTALL LATEST NGINX VERSION-----------------------#
