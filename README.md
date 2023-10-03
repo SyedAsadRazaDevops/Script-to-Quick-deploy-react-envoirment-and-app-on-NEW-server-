@@ -3,9 +3,9 @@
 #----------INSTALL NODEJS & NPM-------------------------------#
 ###install nodejs and npm###
 sudo apt-get install curl
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install nodejs
-apt install nodejs
+sudo apt install nodejs
 
 OR
 
