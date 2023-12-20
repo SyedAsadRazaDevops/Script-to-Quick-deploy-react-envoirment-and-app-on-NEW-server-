@@ -29,6 +29,10 @@ nvm run default --version
 node -V
 npm --v
 
+#----------SOME ADDTIONAL PACKEGE FOR UBUNTU------------------#
+sudo apt-get update
+sudo apt-get install build-essential
+
 #----------INSTALL LATEST NGINX VERSION-----------------------#
 
 sudo apt install curl gnupg2 ca-certificates lsb-release ubuntu-keyring
